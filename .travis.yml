@@ -1,0 +1,36 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t vx991/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run -e CI=true vx991/react-test npm run test
+
+after_success:
+  - docker build -t vx991/multi-client ./client
+  - docker build -t vx991/multi-nginx ./nginx
+  - docker build -t vx991/multi-server ./server
+  - docker build -t vx991/multi-worker ./worker
+  # Login to Docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Push images to Docker Hub
+  - docker push vx991/multi-client
+  - docker push vx991/multi-nginx
+  - docker push vx991/multi-server
+  - docker push vx991/multi-worker
+
+#deploy:
+#  provider: elasticbeanstalk
+#  region: 'us-west-2'
+#  app: 'docker-react'
+#  env: 'docker-react-env'
+#  bucket_name: 'elasticbeanstalk-us-west-2-091546799441'
+#  bucket_path: 'docker-react'
+#  on:
+#    branch: master
+#  access_key_id:
+#    secure: $AWS_ACCESS_KEY
+#  secret_access_key:
+#    secure: $AWS_SECRET_KEY
