@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="220731ae-2c79-4b89-a06c-24ccb658d849" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerrun.aws.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/soliver.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/soliver.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerrun.aws.json" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerrun.aws.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +65,7 @@
       <workItem from="1571094892082" duration="3288000" />
       <workItem from="1571229527538" duration="421000" />
       <workItem from="1571229964580" duration="4644000" />
-      <workItem from="1571315449134" duration="3434000" />
+      <workItem from="1571315449134" duration="3793000" />
     </task>
     <servers />
   </component>
