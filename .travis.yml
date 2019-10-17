@@ -21,16 +21,16 @@ after_success:
   - docker push vx991/multi-server
   - docker push vx991/multi-worker
 
-#deploy:
-#  provider: elasticbeanstalk
-#  region: 'us-west-2'
-#  app: 'docker-react'
-#  env: 'docker-react-env'
-#  bucket_name: 'elasticbeanstalk-us-west-2-091546799441'
-#  bucket_path: 'docker-react'
-#  on:
-#    branch: master
-#  access_key_id:
-#    secure: $AWS_ACCESS_KEY
-#  secret_access_key:
-#    secure: $AWS_SECRET_KEY
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-west-2'
+  app: 'Docker Test'
+  env: 'DockerTest-env'
+  bucket_name: 'elasticbeanstalk-us-west-2-091546799441'
+  bucket_path: 'docker-multi'
+  on:
+    branch: master
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
